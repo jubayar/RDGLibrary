@@ -3,9 +3,7 @@ package net.red.green.rdglibrary
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import net.red.green.rdgmath.MathActivity
-import net.red.green.rdgmath.MathHelper
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -22,6 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions 'Design'
+    productFlavors {
+        ShareTrip {
+            dimension 'Design'
+        }
+        Banglalink {
+            dimension 'Design'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -46,10 +57,10 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
+                from components.BanglalinkRelease
 
                 groupId = 'com.github.jubayar'
-                artifactId = 'rdgmath'
+                artifactId = 'rdgmath-bl'
                 version = '1.0.2'
             }
         }
