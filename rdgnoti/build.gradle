@@ -22,6 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions 'sign'
+    productFlavors {
+        trip {
+            dimension 'sign'
+        }
+        link {
+            dimension 'sign'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -46,7 +57,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.release
+                from components.linkRelease
 
                 groupId = 'com.github.jubayar'
                 artifactId = 'rdgnoti'
