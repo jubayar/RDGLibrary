@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "RDG Library"
-include ':app'
+//include ':app'
 include ':rdgmath'
 include ':rdgnoti'
